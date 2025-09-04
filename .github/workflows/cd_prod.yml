@@ -1,0 +1,15 @@
+name: Github Workflows
+on:
+    push: 
+        branches:
+            - main 
+
+jobs:
+    greet:
+        runs-on: ubuntu-latest 
+        steps:
+            - name: Checkout role
+              uses: actions/checkout@v4
+
+            - name: Greet
+              run: echo "Github Actions!" 
